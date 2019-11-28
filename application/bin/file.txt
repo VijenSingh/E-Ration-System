@@ -1,0 +1,2 @@
+this text is read from file.txt
+my location is application/bin/file.txt

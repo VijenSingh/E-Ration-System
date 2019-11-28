@@ -1,0 +1,29 @@
+<br>
+    <div align="center" style="padding-top: 5px;padding-bottom: 5px">
+    <input type="button" id='script1' name="scriptbutton1" value="User Detail's" onclick='getData1()'>
+	</div>
+	<script type="text/javascript">
+		function getData1() {
+    	$.get("http://localhost/loginDetail", function(data1, status){
+        document.getElementById('loginDetail').innerHTML = data1;
+    	});
+	}
+	</script>
+    <div id = "loginDetail" align="center" style="padding: 5px">	
+    </div>
+<br>
+    <div align="center" style="padding-top: 5px;padding-bottom: 5px">
+    <input type="button" id='script' name="scriptbutton" value="All Connected Devices" onclick='getData()'>
+	</div>
+	<script type="text/javascript">
+		function getData() {
+			document.getElementById('ipList').innerHTML = '<img class="loading_image" src="/file">';
+    		$.get("http://localhost/api", function(data, status){
+        	document.getElementById('ipList').innerHTML = data;
+    		});
+		}
+	</script>
+    <div id = "ipList" align="center" style="padding: 5px">	
+    </div>
+
+        
